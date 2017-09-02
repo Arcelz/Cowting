@@ -17,4 +17,18 @@
     <string name="title_activity_table">TableActivity</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string-array name="tituloLista">
+        <item>Coordenadas fazenda tal</item>
+        <item>Coordenadas de outra fazenda</item>
+        <item>Coordenadas fazenda IFGoiano</item>
+        <item>Coordenadas fazenda ze</item>
+        <item>Coordenadas fazenda</item>
+    </string-array>
+    <string-array name="descricao">
+    <item>coordenadas adasda</item>
+    <item>coordenadas adasda</item>
+    <item>coordenadas adasda</item>
+    <item>coordenadas adasda</item>
+    <item>coordenadas adasda</item>
+    </string-array>
 </resources>
