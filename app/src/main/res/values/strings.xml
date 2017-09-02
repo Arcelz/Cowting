@@ -10,12 +10,12 @@
     <string name="error_invalid_password">Senha muito curta</string>
     <string name="error_incorrect_password">Senha incorreta</string>
     <string name="error_field_required">Este campo e requirido</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
+    <string name="permission_rationale">"Permissao de contatos e requirida para o preenchimento."
     </string>
     <string name="title_activity_maps">Map</string>
-    <string name="title_activity_table">TableActivity</string>
-    <string name="action_settings">Settings</string>
+    <string name="title_activity_table">Cowting</string>
+    <string name="action_settings">Preferencias</string>
+    <string name="salvar_coord">Marcar Localização</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string-array name="tituloLista">
         <item>Coordenadas fazenda tal</item>
