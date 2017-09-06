@@ -32,4 +32,18 @@
     <item>coordenadas adasda</item>
     <item>coordenadas adasda</item>
     </string-array>
+    <string-array name="resultado_titulo_lista">
+        <item>Resultado fazenda tal</item>
+        <item>Resultado de outra fazenda</item>
+        <item>Resultado fazenda IFGoiano</item>
+        <item>Resultado fazenda ze</item>
+        <item>Resultado fazenda</item>
+    </string-array>
+    <string-array name="resultado_descricao_lista">
+        <item>Data:06/09/17 Vacas:20 Prenhas:2</item>
+        <item>Data:06/09/17 Vacas:15 Prenhas:3</item>
+        <item>Data:05/09/17 Vacas:12 Prenhas:2</item>
+        <item>Data:05/09/17 Vacas:25 Prenhas:1</item>
+        <item>Data:05/09/17 Vacas:22 Prenhas:6</item>
+    </string-array>
 </resources>

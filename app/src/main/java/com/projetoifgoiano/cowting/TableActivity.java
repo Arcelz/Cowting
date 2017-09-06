@@ -12,7 +12,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -34,7 +33,6 @@ public class TableActivity extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +79,6 @@ public class TableActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Log.d("testnado","adsa");
             return true;
         }
 
@@ -104,16 +101,16 @@ public class TableActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            MapsActivity tab1 = new MapsActivity();
-            ListActivity tab2 = new ListActivity();
-
             switch (position) {
                 case 0:
+                    MapsFragment tab1 = new MapsFragment();
                     return tab1 ;
                 case 1:
+                    ListFragment tab2 = new ListFragment();
                     return tab2 ;
                 case 2:
-                    return tab1 ;
+                    ListResultadoFragment tab3 = new ListResultadoFragment();
+                    return tab3 ;
                 default:
                     return null;
             }
@@ -131,7 +128,7 @@ public class TableActivity extends AppCompatActivity {
                 case 0:
                     return "INICIO";
                 case 1:
-                    return "CONTAGEM";
+                    return "SALVOS";
                 case 2:
                     return "RESULTADOS";
             }

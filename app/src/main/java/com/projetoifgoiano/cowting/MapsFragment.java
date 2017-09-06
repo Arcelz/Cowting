@@ -1,5 +1,6 @@
 package com.projetoifgoiano.cowting;
 
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,15 +16,16 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends Fragment implements OnMapReadyCallback {
+public class MapsFragment extends Fragment implements OnMapReadyCallback {
 
     private GoogleMap map;
+    private  FloatingActionButton fab;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState) {
-
+        fab = getActivity().findViewById(R.id.fab);
+        fab.setVisibility(View.VISIBLE);
         View view = inflater.inflate(R.layout.activity_maps, container, false);
-
         if (map == null) {
             SupportMapFragment mapFrag = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
             mapFrag.getMapAsync(this);
@@ -31,6 +33,13 @@ public class MapsActivity extends Fragment implements OnMapReadyCallback {
 
         return view;
 
+    }
+
+    @Override
+    public void onResume() {
+        fab = getActivity().findViewById(R.id.fab);
+        fab.setVisibility(View.VISIBLE);
+        super.onResume();
     }
 
     @Override
