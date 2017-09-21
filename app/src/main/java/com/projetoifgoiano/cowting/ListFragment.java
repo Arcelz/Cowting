@@ -42,10 +42,9 @@ public class ListFragment extends Fragment implements AdapterView.OnItemSelected
                 String selected = ((TextView) view.findViewById(R.id.textLongitude)).getText().toString();
                 Toast toast = Toast.makeText(getContext(), selected, Toast.LENGTH_SHORT);
                 toast.show();
-                MapsFragment maps = new MapsFragment();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.main_content,maps);
+                fragmentTransaction.replace(R.id.container,new MapsFragment());
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
@@ -59,9 +58,9 @@ public class ListFragment extends Fragment implements AdapterView.OnItemSelected
 
     @Override
     public void onResume() {
+        super.onResume();
         FloatingActionButton fab = getActivity().findViewById(R.id.fab);
         fab.setVisibility(View.GONE);
-        super.onResume();
     }
 
     @Override

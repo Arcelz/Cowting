@@ -12,6 +12,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -104,6 +105,7 @@ public class TableActivity extends AppCompatActivity {
             switch (position) {
                 case 0:
                     MapsFragment tab1 = new MapsFragment();
+                    Log.d("LOGCOW","LOGCOW");
                     return tab1 ;
                 case 1:
                     ListFragment tab2 = new ListFragment();

@@ -37,9 +37,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
 
     @Override
     public void onResume() {
+        super.onResume();
         fab = getActivity().findViewById(R.id.fab);
         fab.setVisibility(View.VISIBLE);
-        super.onResume();
     }
 
     @Override
