@@ -51,6 +51,7 @@ public class LoginActivity extends AppCompatActivity {
         public void run() {
             Intent k = new Intent(LoginActivity.this, TableActivity.class);
             startActivity(k);
+            finish();
         }
     };
 

@@ -38,8 +38,6 @@ public class ListResultadoFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        FloatingActionButton fab = getActivity().findViewById(R.id.fab);
-        fab.setVisibility(View.GONE);
     }
 
     class MyAdapter extends ArrayAdapter<String> {

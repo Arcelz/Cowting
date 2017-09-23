@@ -1,6 +1,7 @@
 package com.projetoifgoiano.cowting;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -40,13 +41,9 @@ public class ListFragment extends Fragment implements AdapterView.OnItemSelected
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String selected = ((TextView) view.findViewById(R.id.textLongitude)).getText().toString();
-                Toast toast = Toast.makeText(getContext(), selected, Toast.LENGTH_SHORT);
-                toast.show();
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container,new MapsFragment());
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                Intent intent = new Intent(getActivity(),MapsActivity.class);
+                intent.putExtra("Cordenada",selected);
+                startActivity(intent);
             }
         });
 
@@ -59,8 +56,6 @@ public class ListFragment extends Fragment implements AdapterView.OnItemSelected
     @Override
     public void onResume() {
         super.onResume();
-        FloatingActionButton fab = getActivity().findViewById(R.id.fab);
-        fab.setVisibility(View.GONE);
     }
 
     @Override

@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 
 public class TableActivity extends AppCompatActivity {
@@ -51,16 +52,6 @@ public class TableActivity extends AppCompatActivity {
         mViewPager.setAdapter(mSectionsPagerAdapter);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MediaStore.INTENT_ACTION_VIDEO_CAMERA);
-                startActivity(intent);
-            }
-        });
-
     }
 
 
@@ -104,15 +95,14 @@ public class TableActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    MapsFragment tab1 = new MapsFragment();
-                    Log.d("LOGCOW","LOGCOW");
-                    return tab1 ;
+                    Fragment tab1 = new HomeActivity();
+                    return tab1;
                 case 1:
-                    ListFragment tab2 = new ListFragment();
-                    return tab2 ;
+                    Fragment tab2 = new ListFragment();
+                    return tab2;
                 case 2:
-                    ListResultadoFragment tab3 = new ListResultadoFragment();
-                    return tab3 ;
+                    Fragment tab3 = new ListResultadoFragment();
+                    return tab3;
                 default:
                     return null;
             }

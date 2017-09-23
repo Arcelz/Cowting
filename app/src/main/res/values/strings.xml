@@ -19,8 +19,8 @@
     <string name="salvar_coord">Marcar Localização</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string-array name="tituloLista">
-        <item>Coordenadas fazenda tal</item>
-        <item>Coordenadas de outra fazenda</item>
+        <item>Coordenadas IFGoiano Morrinhos</item>
+        <item>Coordenadas IFGoiano Urutaí</item>
         <item>Coordenadas fazenda IFGoiano</item>
         <item>Coordenadas fazenda ze</item>
         <item>Coordenadas fazenda</item>
@@ -31,16 +31,16 @@
         <item>Coordenadas fazenda</item>
     </string-array>
     <string-array name="descricao">
-        <item>coordenadas adasda</item>
-        <item>coordenadas adasda</item>
-        <item>coordenadas adasda</item>
-        <item>coordenadas adasda</item>
-        <item>coordenadas adasda</item>
-        <item>coordenadas adasda</item>
-        <item>coordenadas adasda</item>
-        <item>coordenadas adasda</item>
-        <item>coordenadas adasda</item>
-        <item>coordenadas adasda</item>
+        <item>-17.8128337,-49.2066658</item>
+        <item>-17.4858261,-48.2136891</item>
+        <item>-17.733114, -49.114595</item>
+        <item>-17.8128337,-49.2066658</item>
+        <item>-17.733114, -49.114595</item>
+        <item>17.8234656,-49.2068905</item>
+        <item>17.8234656,-49.2068905</item>
+        <item>17.8234656,-49.2068905</item>
+        <item>17.8234656,-49.2068905</item>
+        <item>17.8234656,-49.2068905</item>
     </string-array>
     <string-array name="resultado_titulo_lista">
         <item>Resultado fazenda tal</item>
