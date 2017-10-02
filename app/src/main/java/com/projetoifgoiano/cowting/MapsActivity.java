@@ -1,10 +1,12 @@
 package com.projetoifgoiano.cowting;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -13,7 +15,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, View.OnClickListener {
 
 
     private GoogleMap mMap;
@@ -27,6 +29,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        FloatingActionButton inicia = (FloatingActionButton) findViewById(R.id.floatingActionButtonMaps);
+        inicia.setOnClickListener(this);
     }
 
 
@@ -35,17 +39,26 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-        LatLng cord;
-        String corde[] = cordenada.split(",");
+        LatLng cord = null;
         if (cordenada == null){
            cord = new LatLng(-17.733114, -49.114595);
+           mMap.addMarker(new MarkerOptions().position(cord).title("Marker"));
         }
         else {
-            Log.d("LOGCOW",String.valueOf(corde[0]));
-            cord = new LatLng(Double.valueOf(corde[0]),Double.valueOf(corde[1]));
+            String corde[] = cordenada.split(",");
+            int inc1=0;
+            int inc2=1;
+            for (int i=0;i <= corde.length;i++) {
+                if(i+inc2 < corde.length){
+                    cord = new LatLng(Double.valueOf(corde[i+inc1]),Double.valueOf(corde[i+inc2]));
+                    mMap.addMarker(new MarkerOptions().position(cord).title("Marker"));
+                    inc1 = 1;
+                    inc2 = 2;
+                }
+            }
         }
-        mMap.addMarker(new MarkerOptions().position(cord).title("Marker"));
         float zoomLevel = (float) 16.0;
+        Log.d("LOGCOW",""+cord);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(cord, zoomLevel));
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
 
@@ -59,5 +72,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
 
         });
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(MapsActivity.this,OpcoesActivity.class);
+        startActivity(intent);
     }
 }

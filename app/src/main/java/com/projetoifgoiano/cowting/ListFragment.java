@@ -26,6 +26,7 @@ public class ListFragment extends Fragment implements AdapterView.OnItemSelected
     ListView list;
     String[] titles;
     String[] descricao;
+    String[] descricaoCod;
     int img;
 
     @Override
@@ -35,19 +36,20 @@ public class ListFragment extends Fragment implements AdapterView.OnItemSelected
 
         titles = res.getStringArray(R.array.tituloLista);
         descricao = res.getStringArray(R.array.descricao);
+        descricaoCod =  res.getStringArray(R.array.descricaoCord);
 
         list = (ListView) view.findViewById(R.id.listCord);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String selected = ((TextView) view.findViewById(R.id.textLongitude)).getText().toString();
+                String selected = ((TextView) view.findViewById(R.id.descricaoCord)).getText().toString();
                 Intent intent = new Intent(getActivity(),MapsActivity.class);
                 intent.putExtra("Cordenada",selected);
                 startActivity(intent);
             }
         });
 
-        MyAdapter adapter = new MyAdapter(view.getContext(),titles,img,descricao);
+        MyAdapter adapter = new MyAdapter(view.getContext(),titles,img,descricao,descricaoCod);
         list.setAdapter(adapter);
         return view;
     }
@@ -73,11 +75,13 @@ public class ListFragment extends Fragment implements AdapterView.OnItemSelected
         int img;
         String myTitles[];
         String myDescricao[];
+        String myDescricaoCord[];
 
-        MyAdapter(Context c, String[] titles, int img, String[] descricao) {
+        MyAdapter(Context c, String[] titles, int img, String[] descricao, String[] descricaoCord) {
             super(c, R.layout.row, R.id.text1, titles);
             this.img = img;
             this.myDescricao = descricao;
+            this.myDescricaoCord = descricao;
             this.myTitles = titles;
         }
 
@@ -88,9 +92,11 @@ public class ListFragment extends Fragment implements AdapterView.OnItemSelected
             ImageView image = (ImageView) row.findViewById(R.id.iconMaps);
             TextView myTitle = (TextView) row.findViewById(R.id.textTitle);
             TextView myDescricao = (TextView) row.findViewById(R.id.textLongitude);
+            TextView myDescricaoCord = (TextView) row.findViewById(R.id.descricaoCord);
             image.setImageResource(R.drawable.icone_map);
             myTitle.setText(titles[position]);
             myDescricao.setText(descricao[position]);
+            myDescricaoCord.setText(descricaoCod[position]);
             return row;
         }
     }

@@ -5,4 +5,15 @@
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.projetoifgoiano.cowting.MapsActivity" />
+    tools:context="com.projetoifgoiano.cowting.MapsActivity" >
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButtonMaps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="340dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="580dp"
+        android:clickable="true"
+        map:fabSize="normal"
+        map:srcCompat="@android:drawable/ic_menu_send" />
+    </fragment>

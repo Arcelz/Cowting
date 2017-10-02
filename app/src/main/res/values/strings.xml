@@ -31,8 +31,20 @@
         <item>Coordenadas fazenda</item>
     </string-array>
     <string-array name="descricao">
-        <item>-17.8128337,-49.2066658</item>
-        <item>-17.4858261,-48.2136891</item>
+        <item>Teste salvando</item>
+        <item>Teste salvando</item>
+        <item>Teste salvando</item>
+        <item>Teste salvando</item>
+        <item>Teste salvando</item>
+        <item>Teste salvando</item>
+        <item>Teste salvando</item>
+        <item>Teste salvando</item>
+        <item>Teste salvando</item>
+        <item>Teste salvando</item>
+    </string-array>
+    <string-array name="descricaoCord">
+        <item>-17.805804,-49.204731,-17.804621, -49.201581,-17.807157,-49.200180,-17.807301, -49.199575,-17.810792,-49.197472,-17.816123,-49.201944,-17.811952, -49.198855</item>
+        <item>-17.490237,-48.211819,-17.491327,-48.212765,-17.492663,-48.210015,-17.491398,-48.209343</item>
         <item>-17.733114, -49.114595</item>
         <item>-17.8128337,-49.2066658</item>
         <item>-17.733114, -49.114595</item>
@@ -55,15 +67,15 @@
         <item>Resultado fazenda</item>
     </string-array>
     <string-array name="resultado_descricao_lista">
-        <item>Data:06/09/17 Vacas:20 Prenhas:2</item>
-        <item>Data:06/09/17 Vacas:15 Prenhas:3</item>
-        <item>Data:05/09/17 Vacas:12 Prenhas:2</item>
-        <item>Data:05/09/17 Vacas:25 Prenhas:1</item>
-        <item>Data:05/09/17 Vacas:22 Prenhas:6</item>
-        <item>Data:06/09/17 Vacas:20 Prenhas:2</item>
-        <item>Data:06/09/17 Vacas:15 Prenhas:3</item>
-        <item>Data:05/09/17 Vacas:12 Prenhas:2</item>
-        <item>Data:05/09/17 Vacas:25 Prenhas:1</item>
-        <item>Data:05/09/17 Vacas:22 Prenhas:6</item>
+        <item>Data:27/09/17</item>
+        <item>Data:26/09/17</item>
+        <item>Data:25/09/17</item>
+        <item>Data:24/09/17</item>
+        <item>Data:23/09/17</item>
+        <item>Data:22/09/17/</item>
+        <item>Data:21/09/17</item>
+        <item>Data:20/09/17</item>
+        <item>Data:19/09/17</item>
+        <item>Data:18/09/17</item>
     </string-array>
 </resources>
