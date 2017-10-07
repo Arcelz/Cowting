@@ -81,7 +81,7 @@ public class ListFragment extends Fragment implements AdapterView.OnItemSelected
             super(c, R.layout.row, R.id.text1, titles);
             this.img = img;
             this.myDescricao = descricao;
-            this.myDescricaoCord = descricao;
+            this.myDescricaoCord = descricaoCord;
             this.myTitles = titles;
         }
 
